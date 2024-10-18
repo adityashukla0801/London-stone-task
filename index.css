@@ -1,0 +1,148 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px;
+  color: #444;
+}
+
+.upper-container {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.product {
+  border: 1px solid #ccc;
+  padding: 10px;
+  height: 300px;
+  width: 300px;
+}
+
+#filtered-products-container {
+  width: 65vw;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Container for the swatches */
+#swatches-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.color-filter {
+  width: 30vw;
+  background-color: #f2f2f7;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+h2 {
+  margin-bottom: 15px;
+}
+
+#range-checkboxes {
+  margin: 1rem 0;
+}
+
+/* Disabled label styles */
+.disabled-label {
+  pointer-events: none; /* Disable interaction */
+  cursor: not-allowed; /* Change cursor to indicate disabled state */
+  opacity: 0.5; /* Optional: reduce opacity for visual feedback */
+}
+
+/* Remove hover effect when disabled */
+.disabled-label:hover {
+  background-color: inherit; /* Reset background on hover */
+  color: inherit; /* Reset text color on hover */
+}
+
+.range-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.check {
+  width: 25px;
+  height: 25px;
+  border-radius: 0;
+  accent-color: #e59901;
+  border: 1px solid #333;
+}
+
+.check-range-contain {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Swatch Layout */
+.swatch {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.swatch input {
+  display: none;
+  cursor: pointer;
+}
+
+/* Label containing color and text */
+.swatch-label {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  cursor: pointer;
+}
+
+/* Color Box Styles */
+.color-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.2s ease, outline 0.2s, outline-offset 0.2s;
+}
+
+/* Hover Effect: Shrink Color Box */
+.swatch-label:hover .color-box:not(.selected) {
+  transform: scale(0.85);
+}
+
+/* Selected Color Box (Checked) */
+.swatch input:checked + .swatch-label .color-box {
+  outline: 2px solid #e59901;
+  outline-offset: 2px;
+  transform: scale(0.9); /* Keep the color box shrunk */
+  pointer-events: none; /* Disable hover after selection */
+}
+
+.color-name-div {
+  width: 60%;
+}
+
+/* Text Styles */
+.color-name {
+  font-size: 16px;
+}
+
+.count {
+  color: gray;
+  font-size: 14px;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Filter - Color Swatches</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="">
+      <div class="upper-container">
+        <div class="color-filter">
+          <h2>Colour</h2>
+          <div id="swatches-container"></div>
+
+          <div id="range-checkboxes">
+            <div class="range-checkbox">
+              <div class="check-range-contain">
+                <input
+                  class="check"
+                  type="checkbox"
+                  id="range-11"
+                  name="range"
+                />
+                <label for="range-11">Light</label>
+              </div>
+
+              <span class="count" id="light-count">(0)</span>
+            </div>
+            <div class="range-checkbox">
+              <div class="check-range-contain">
+                <input
+                  class="check"
+                  type="checkbox"
+                  id="range-22"
+                  name="range"
+                />
+                <label for="range-22">Medium</label>
+              </div>
+
+              <span class="count" id="medium-count">(0)</span>
+            </div>
+            <div class="range-checkbox">
+              <div class="check-range-contain">
+                <input
+                  class="check"
+                  type="checkbox"
+                  id="range-33"
+                  name="range"
+                />
+                <label for="range-33">Dark</label>
+              </div>
+              <span class="count" id="dark-count">(0)</span>
+            </div>
+          </div>
+        </div>
+        <div id="filtered-products-container"></div>
+      </div>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
